@@ -1,0 +1,24 @@
+MoneyTrack — Updated MVP
+=========================
+
+This version adds:
+1. Login / Sign up screen
+2. Local browser account for the MVP
+3. Daily 9:00 PM money check-in popup
+4. Notifications history via the bell icon
+5. Optional browser notification when permission is granted
+6. Automatic safe daily spending recalculation
+7. Logout
+
+Run:
+  npm install
+  npm run dev
+
+Open:
+  http://localhost:5173/
+
+Important:
+- This MVP stores account and money data in the browser localStorage.
+- It does NOT connect to a bank.
+- The 9:00 PM in-app popup appears when the app is open. Browser notifications require notification permission.
+- For real production login/security, replace the local account with Firebase/Auth + a backend.
