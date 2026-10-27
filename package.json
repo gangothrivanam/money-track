@@ -1,0 +1,5 @@
+{"name":"moneytrack","private":true,"version":"1.0.0",
+"scripts":{"install-all":"npm install && npm install --prefix server && npm install --prefix client",
+"db:init":"npm run db:init --prefix server",
+"dev":"concurrently -n api,web -c green,blue \"npm run dev --prefix server\" \"npm run dev --prefix client\""},
+"devDependencies":{"concurrently":"^8.2.2"}}

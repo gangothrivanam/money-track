@@ -1,0 +1,8 @@
+1. Open the "moneytrack" folder (the one containing client, server, database) in VS Code.
+2. Open server\.env and replace PUT_YOUR_MYSQL_PASSWORD_HERE with your MySQL root password (or your MySQL user/password).
+3. Open a terminal in that folder (Terminal > New Terminal) and run, one at a time:
+     npm run install-all
+     npm run db:init
+     npm run dev
+4. Open http://localhost:5173/ and create an account.
+Stop with Ctrl+C. Next time you only need: npm run dev

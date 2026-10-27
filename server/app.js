@@ -1,0 +1,15 @@
+import express from 'express';
+import cors from 'cors';
+import helmet from 'helmet';
+import authRoutes from './routes/auth.js';
+import dataRoutes from './routes/data.js';
+import { fail } from './middleware/auth.js';
+const app=express();
+app.use(helmet());
+app.use(cors({origin:(process.env.CLIENT_ORIGIN||'').split(','),credentials:false}));
+app.use(express.json({limit:'100kb'}));
+app.use('/api/auth',authRoutes);
+app.use('/api',dataRoutes);
+app.get('/health',(q,s)=>s.json({ok:true}));
+app.use(fail);
+export default app;
