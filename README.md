@@ -1,115 +1,181 @@
-<img width="1885" height="872" alt="image" src="https://github.com/user-attachments/assets/a70f2553-a9e8-4a95-b2ab-66b0af3537f0" />
-MoneyTrack 💰
-MoneyTrack is a personal finance tracking web application designed to
-help users record income and expenses, monitor daily spending, and
-manage budgets.
-Features
-- User registration and login
-- Record and review income and expenses
-- Track spending over time
-- Manage budget settings
-- Dashboard for viewing financial activity
-Features available in the deployed version depend on the frontend,
-backend, and database being configured correctly.
+# 💰 MoneyTrack — Smart Expense Tracker
+<img width="1889" height="892" alt="image" src="https://github.com/user-attachments/assets/09286158-f1ba-487e-b741-f9479827c472" />   <img width="1883" height="860" alt="image" src="https://github.com/user-attachments/assets/ed57d9c4-2c96-46b3-970a-a2ffdb33bb4a" />
 
-Tech Stack
-Frontend
-- React
+
+
+**MoneyTrack** is a web-based expense tracking application designed to help users manage their money, track daily spending, and understand their spending habits through interactive charts and a simple dashboard.
+
+🔗 **Live Demo:** [MoneyTrack](https://money-track-1-tn00.onrender.com)  
+💻 **GitHub Repository:** [MoneyTrack on GitHub](https://github.com/gangothrivanam/money-track)
+
+## ✨ Features
+
+- 📊 **Expense Analytics:** Visualize spending patterns using interactive charts.
+- 💸 **Daily Expense Tracking:** Record and monitor daily expenses.
+- 💰 **Income Management:** Keep track of income and expenses.
+- 🔔 **Notifications:** Display popup notifications and expense alerts.
+- 📈 **Dashboard:** View financial information in one place.
+- 📱 **Responsive Design:** Access the application on different screen sizes.
+- ⚙️ **Settings:** Manage available application preferences.
+- 🔐 **User Authentication:** Register and log in to your account.
+
+*Note: Features may vary depending on the functionality available in the deployed version.*
+
+## 🛠️ Technologies Used
+
+### Frontend
+- React.js
+- JavaScript
+- HTML5
+- CSS3
 - Vite
-- HTML, CSS, and JavaScript
-Backend
+
+### Backend
 - Node.js
 - Express.js
-- JWT-based authentication
-- mysql2 for MySQL database access
-Database
+
+### Database
 - MySQL
-Project Structure
-money-track/
-├── client/          # React + Vite frontend
-└── server/          # Express API and database scripts
-Run Locally
-1. Requirements
-Install: - Node.js and npm - MySQL Server
 
-Clone the repository and open it in your terminal:
+### Tools & Deployment
+- Git and GitHub
+- Visual Studio Code
+- Render
+- Aiven MySQL
+
+## 🏗️ Project Architecture
+
+MoneyTrack uses a client-server architecture.
+
+1. **Frontend:** React.js provides the user interface.
+2. **Backend:** Node.js and Express.js handle API requests and application logic.
+3. **Database:** MySQL stores application data.
+4. **API Communication:** The frontend communicates with the backend through REST API endpoints.
+5. **Deployment:** The frontend and backend are deployed separately on Render, with MySQL hosted on Aiven.
+
+## 🚀 Live Application
+
+Try the application here:
+
+👉 [Open MoneyTrack](https://money-track-1-tn00.onrender.com)
+
+## 💻 Run the Project Locally
+
+### Prerequisites
+
+Install the following tools:
+
+- Node.js and npm
+- MySQL
+- Git
+
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/gangothrivanam/money-track.git
+```
+
+Navigate into the project folder:
+
+```bash
 cd money-track
-2. Configure the database
-Create a MySQL database named moneytrack.
+```
 
-Run the database initialization script from the server directory if
-your project includes the initialization script:
+### 2. Configure the Backend
+
+Navigate to the backend folder:
+
+```bash
 cd server
-npm install
-npm run db:init
-Create a server/.env file with your own local database credentials:
-PORT=4000
-DB_HOST=localhost
-DB_PORT=3306
-DB_USER=YOUR_MYSQL_USERNAME
-DB_PASSWORD=YOUR_MYSQL_PASSWORD
-DB_NAME=moneytrack
-JWT_SECRET=REPLACE_WITH_A_LONG_RANDOM_SECRET
-CLIENT_ORIGIN=http://localhost:5173
-Do not commit .env files or real passwords/secrets to GitHub.
-3. Start the backend
-From the server directory:
-npm start
-The API should run at http://localhost:4000 when the configuration is
-correct. The health endpoint is available at:
-http://localhost:4000/health
-4. Configure and start the frontend
-Open a second terminal:
-cd client
-npm install
-Create client/.env with:
-VITE_API_URL=http://localhost:4000/api
-Start the development server:
-npm run dev
-Vite usually serves the frontend at http://localhost:5173.
-Deployment
-To make MoneyTrack work publicly, deploy all required parts:
-1. Frontend: Deploy the client directory to a static hosting
-   provider that supports Vite.
-   - Build command: npm install && npm run build
-   - Publish directory: dist
-2. Backend: Deploy the server directory to a Node.js hosting
-   provider.
-   - Build command: npm install
-   - Start command: npm start
-3. Database: Use a hosted MySQL database and configure the backend
-   environment variables with its connection details.
-4. Set VITE_API_URL in the frontend hosting settings to the deployed
-   backend API URL plus /api.
-5. Set CLIENT_ORIGIN in the backend environment to the exact deployed
-   frontend origin.
-A GitHub repository alone stores the code; it does not automatically
-host the Node.js API or provide a running MySQL database. Check the
-selected providers' current free-plan limits before deploying.
-Environment Variables
-  Variable          Purpose
-  PORT            Port used by the backend host
-  DB_HOST         MySQL server hostname
-  DB_PORT         MySQL server port, commonly 3306
-  DB_USER         MySQL username
-  DB_PASSWORD     MySQL password
-  DB_NAME         Database name, such as moneytrack
-  JWT_SECRET      Private secret used to sign authentication tokens
-  CLIENT_ORIGIN   Deployed frontend origin allowed by CORS
-  VITE_API_URL    Frontend API base URL, including /api
+```
 
-Use your hosting provider's environment-variable settings for production
-secrets. Never put real credentials in this README or in source control.
-Security Notes
-- Keep all passwords, JWT secrets, and production database credentials
-  private.
-- Do not commit .env files.
-- Use a unique, strong JWT_SECRET for production.
-- Restrict database access according to your database provider's
-  security settings.
-Repository
-GitHub: https://github.com/gangothrivanam/money-track
-License
-Add a license file if you intend to publish this project under an
-open-source license.
+Install the dependencies:
+
+```bash
+npm install
+```
+
+Create a `.env` file inside the `server` folder and configure the required environment variables:
+
+```env
+PORT=4000
+DB_HOST=your_mysql_host
+DB_PORT=your_mysql_port
+DB_USER=your_mysql_user
+DB_PASSWORD=your_mysql_password
+DB_NAME=your_database_name
+JWT_SECRET=your_secret_key
+CLIENT_ORIGIN=http://localhost:5173
+```
+
+**Important:** Replace the example values with your own database credentials and secret key. Never upload your `.env` file or expose passwords and secret keys on GitHub.
+
+Initialize the database tables:
+
+```bash
+npm run db:init
+```
+
+Start the backend server:
+
+```bash
+npm start
+```
+
+### 3. Configure the Frontend
+
+Open a new terminal and navigate to the frontend folder:
+
+```bash
+cd client
+```
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+Create a `.env` file inside the `client` folder:
+
+```env
+VITE_API_URL=http://localhost:4000/api
+```
+
+Start the frontend:
+
+```bash
+npm run dev
+```
+
+### 4. Open the Application
+
+Visit the local address displayed in your terminal, usually:
+
+`http://localhost:5173`
+
+You can now test the application in your browser.
+
+## 🔒 Security Notes
+
+- Store credentials in environment variables.
+- Never commit `.env` files to GitHub.
+- Use strong, unique secret keys.
+- Keep database credentials private.
+- Validate user input on the backend.
+
+## 🎯 Project Goal
+
+The goal of MoneyTrack is to make personal expense management easier by providing a simple way to record expenses, monitor income, and visualize spending habits.
+
+## 👩‍💻 Developer
+
+**Vanam Gangothri**  
+B.Tech Computer Science and Engineering | 2026 Graduate
+
+- GitHub: [gangothrivanam](https://github.com/gangothrivanam)
+- Project: [MoneyTrack Repository](https://github.com/gangothrivanam/money-track)
+
+---
+
+⭐ If you find this project useful, consider giving the repository a star!
