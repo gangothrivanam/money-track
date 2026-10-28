@@ -1,12 +1,10 @@
 # 💰 MoneyTrack — Smart Expense Tracker
-<img width="1889" height="892" alt="image" src="https://github.com/user-attachments/assets/09286158-f1ba-487e-b741-f9479827c472" />   <img width="1883" height="860" alt="image" src="https://github.com/user-attachments/assets/ed57d9c4-2c96-46b3-970a-a2ffdb33bb4a" />
-
-
 
 **MoneyTrack** is a web-based expense tracking application designed to help users manage their money, track daily spending, and understand their spending habits through interactive charts and a simple dashboard.
 
 🔗 **Live Demo:** [MoneyTrack](https://money-track-1-tn00.onrender.com)  
 💻 **GitHub Repository:** [MoneyTrack on GitHub](https://github.com/gangothrivanam/money-track)
+<img width="1889" height="892" alt="image" src="https://github.com/user-attachments/assets/09286158-f1ba-487e-b741-f9479827c472" />   <img width="1883" height="860" alt="image" src="https://github.com/user-attachments/assets/ed57d9c4-2c96-46b3-970a-a2ffdb33bb4a" />
 
 ## ✨ Features
 
